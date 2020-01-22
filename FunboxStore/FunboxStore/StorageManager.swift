@@ -6,4 +6,24 @@
 //  Copyright © 2020 Алексей Макаров. All rights reserved.
 //
 
-import Foundation
+import RealmSwift
+
+let realm = try! Realm()
+
+class StorageManager {
+    
+    // Save
+    static func saveObject(_ device: DeviceModel) {
+        try! realm.write {
+            realm.add(device)
+        }
+    }
+    
+    // Delete
+    static func deleteObject (_ device: DeviceModel) {
+        try! realm.write {
+            realm.delete(device)
+        }
+    }
+    
+}

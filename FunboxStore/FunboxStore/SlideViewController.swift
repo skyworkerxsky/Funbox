@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SldieViewController: UIViewController {
+class SlideViewController: UIViewController {
 
     // MARK: - UI
     

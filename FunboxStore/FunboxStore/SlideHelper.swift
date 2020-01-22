@@ -6,4 +6,8 @@
 //  Copyright © 2020 Алексей Макаров. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+struct SlideHelper {
+    var name = String()
+}
