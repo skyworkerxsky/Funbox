@@ -70,7 +70,7 @@
         <!--Custom Page View Controller-->
         <scene sceneID="yDL-8s-puY">
             <objects>
-                <pageViewController storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="CWz-TI-jFS" customClass="CustomPageViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="CWz-TI-jFS" customClass="CustomPageViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="46x-x4-PXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-10508" y="768"/>

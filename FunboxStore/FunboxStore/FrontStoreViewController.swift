@@ -8,17 +8,13 @@
 //
 
 import UIKit
+import RealmSwift
 
 class FrontStoreViewController: UIViewController {
    
    // MARK: - Properties
    
-   let dataSource = [
-      "View Controller 1",
-      "View Controller 2",
-      "View Controller 3",
-      "View Controller 4"
-   ]
+   let dataSource = try! Realm().objects(DeviceModel.self)
    
    var currentViewControllerIndex = 0
    
@@ -28,6 +24,13 @@ class FrontStoreViewController: UIViewController {
    
    // MARK: - Life
    
+   override func viewWillAppear(_ animated: Bool) {
+      super.viewWillAppear(animated)
+    
+      reload() // чтобы обновить добавленный контент
+   }
+   
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       
@@ -35,6 +38,11 @@ class FrontStoreViewController: UIViewController {
    }
    
    // MARK: - Functions
+   
+   func reload() {
+      currentViewControllerIndex = 0
+      configurePageViewController()
+   }
    
    func configurePageViewController() {
       
@@ -49,7 +57,7 @@ class FrontStoreViewController: UIViewController {
       pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
       contentView.addSubview(pageViewController.view)
       
-      let views: [String: Any] = ["pageView": pageViewController.view]
+      let views: [String: Any] = ["pageView": pageViewController.view!]
       
       contentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|",
                                                                 options: NSLayoutConstraint.FormatOptions(rawValue: 0),
@@ -74,7 +82,7 @@ class FrontStoreViewController: UIViewController {
       guard let dataViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: DataViewController.self)) as? DataViewController else { return nil }
       
       dataViewController.index = index
-      dataViewController.text = dataSource[index]
+      dataViewController.text = dataSource[index].title
       
       return dataViewController
    }
@@ -83,13 +91,13 @@ class FrontStoreViewController: UIViewController {
 
 extension FrontStoreViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
    
-   func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-      return currentViewControllerIndex
-   }
-   
-   func presentationCount(for pageViewController: UIPageViewController) -> Int {
-      return dataSource.count
-   }
+//   func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+//      return currentViewControllerIndex
+//   }
+//
+//   func presentationCount(for pageViewController: UIPageViewController) -> Int {
+//      return dataSource.count
+//   }
    
    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
       

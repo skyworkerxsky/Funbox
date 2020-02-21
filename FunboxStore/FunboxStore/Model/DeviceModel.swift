@@ -34,7 +34,7 @@ class DeviceModel: Object {
         return "deviceID"
     }
     
-    func createTest() {
+    static func createTest() {
         var count = 0
         for _ in 1...5 {
             

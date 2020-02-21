@@ -15,8 +15,6 @@ import RealmSwift
     // MARK: - Properties
     
     let device = try! Realm().objects(DeviceModel.self)
-    let hasLaunchedKey = "HasLaunched"
-    let defaults = UserDefaults.standard
     
     // MARK: - Life
     
@@ -26,13 +24,6 @@ import RealmSwift
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(prep))
         
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "cell")
-        
-        let hasLaunched = defaults.bool(forKey: hasLaunchedKey)
-        if !hasLaunched {
-            defaults.set(true, forKey: hasLaunchedKey)
-            let device = DeviceModel()
-            device.createTest()
-        }
     }
     
     // MARK: - Selectors
@@ -90,6 +81,8 @@ import RealmSwift
         guard let newDeviceVC = segue.source as? DetailTableViewController else { return }
         
         newDeviceVC.saveDevice()
+        let frontStoreVC = FrontStoreViewController()
+        frontStoreVC.reload()
         tableView.reloadData()
     }
     

@@ -11,7 +11,6 @@
 		7C1271F723FFDE1200F34B2D /* FrontStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1271F623FFDE1200F34B2D /* FrontStoreViewController.swift */; };
 		7C1271F923FFE5CD00F34B2D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1271F823FFE5CD00F34B2D /* DataViewController.swift */; };
 		7C1271FB23FFE6BA00F34B2D /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1271FA23FFE6B900F34B2D /* CustomPageViewController.swift */; };
-		7CC653C823D827C500527B8C /* SlideHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC653C723D827C500527B8C /* SlideHelper.swift */; };
 		7CF40F7223D5B0F500BF33A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF40F7123D5B0F500BF33A5 /* AppDelegate.swift */; };
 		7CF40F7423D5B0F500BF33A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF40F7323D5B0F500BF33A5 /* SceneDelegate.swift */; };
 		7CF40F7923D5B0F500BF33A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7CF40F7723D5B0F500BF33A5 /* Main.storyboard */; };
@@ -33,7 +32,6 @@
 		7C1271F623FFDE1200F34B2D /* FrontStoreViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = FrontStoreViewController.swift; sourceTree = "<group>"; };
 		7C1271F823FFE5CD00F34B2D /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		7C1271FA23FFE6B900F34B2D /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
-		7CC653C723D827C500527B8C /* SlideHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideHelper.swift; sourceTree = "<group>"; };
 		7CF40F6E23D5B0F500BF33A5 /* FunboxStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunboxStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF40F7123D5B0F500BF33A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CF40F7323D5B0F500BF33A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				7C1271ED23FFD87200F34B2D /* Model */,
 				7C1271EC23FFD86E00F34B2D /* View */,
 				7C1271EE23FFD87600F34B2D /* Controller */,
-				7CC653C923D827F600527B8C /* Helper */,
 			);
 			name = "Front-store";
 			sourceTree = "<group>";
@@ -199,14 +196,6 @@
 				7CF40F8523D5B49E00BF33A5 /* DeviceModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7CC653C923D827F600527B8C /* Helper */ = {
-			isa = PBXGroup;
-			children = (
-				7CC653C723D827C500527B8C /* SlideHelper.swift */,
-			);
-			name = Helper;
 			sourceTree = "<group>";
 		};
 		7CF40F6523D5B0F500BF33A5 = {
@@ -354,7 +343,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7CC653C823D827C500527B8C /* SlideHelper.swift in Sources */,
 				7CF40F7223D5B0F500BF33A5 /* AppDelegate.swift in Sources */,
 				7C1271F923FFE5CD00F34B2D /* DataViewController.swift in Sources */,
 				7C1271FB23FFE6BA00F34B2D /* CustomPageViewController.swift in Sources */,

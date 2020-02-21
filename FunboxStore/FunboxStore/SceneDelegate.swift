@@ -12,6 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
     
+    let hasLaunchedKey = "HasLaunched"
+    let defaults = UserDefaults.standard
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
@@ -20,6 +22,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.windowScene = windowScene
         
+        let hasLaunched = defaults.bool(forKey: hasLaunchedKey)
+        if !hasLaunched {
+            defaults.set(true, forKey: hasLaunchedKey)
+            DeviceModel.createTest()
+        }
         
         let firstVC = UIStoryboard(name: "FrontStoreStoryboard", bundle: nil).instantiateViewController(withIdentifier: "FrontStoreViewController")
         firstVC.title = "Front-Store"
