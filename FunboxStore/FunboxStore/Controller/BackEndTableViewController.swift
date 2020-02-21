@@ -40,7 +40,7 @@ import RealmSwift
     @objc func prep() {
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailVC") as! DetailTableViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: String(describing: DetailTableViewController.self)) as! DetailTableViewController
         let nav = UINavigationController(rootViewController: nextViewController)
         nav.modalPresentationStyle = .fullScreen
         self.present(nav, animated:true, completion:nil)
@@ -60,10 +60,10 @@ import RealmSwift
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = device[indexPath.row]
+//        let cell = device[indexPath.row]
         
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailVC") as! DetailTableViewController
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: String(describing: DetailTableViewController.self)) as! DetailTableViewController
         let nav = UINavigationController(rootViewController: nextViewController)
         nextViewController.currentDevice = device[indexPath.row]
         self.present(nav, animated:true, completion:nil)

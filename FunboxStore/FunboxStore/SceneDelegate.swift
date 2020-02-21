@@ -20,7 +20,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.windowScene = windowScene
         
-        let firstVC = PageViewController()
+        
+        let firstVC = UIStoryboard(name: "FrontStoreStoryboard", bundle: nil).instantiateViewController(withIdentifier: "FrontStoreViewController")
         firstVC.title = "Front-Store"
         
         let secondVC = UINavigationController(rootViewController: BackEndTableViewController())

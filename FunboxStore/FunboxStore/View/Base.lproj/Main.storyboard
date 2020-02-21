@@ -73,7 +73,7 @@
         <!--Detail Table View Controller-->
         <scene sceneID="uhh-Nh-9ys">
             <objects>
-                <tableViewController storyboardIdentifier="DetailVC" id="FEh-Mr-eNu" customClass="DetailTableViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DetailTableViewController" id="FEh-Mr-eNu" customClass="DetailTableViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GhV-w2-sq6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +231,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zel-WI-ivV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="WBw-uf-YcX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2524" y="195.6521739130435"/>
+            <point key="canvasLocation" x="697" y="916"/>
         </scene>
         <!--Back-End-->
         <scene sceneID="6xy-UZ-Vkh">
@@ -269,7 +269,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bS5-z4-frW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1584.8" y="195.6521739130435"/>
+            <point key="canvasLocation" x="-242" y="917"/>
         </scene>
     </scenes>
 </document>

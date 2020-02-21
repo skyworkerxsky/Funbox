@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Front Store View Controller-->
+        <scene sceneID="2fN-1W-xw8">
+            <objects>
+                <viewController storyboardIdentifier="FrontStoreViewController" id="EVQ-vj-Mzw" customClass="FrontStoreViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xep-VU-W8B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="quz-Ji-Bt2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="quz-Ji-Bt2" firstAttribute="leading" secondItem="ouE-lD-QAR" secondAttribute="leading" id="OwS-Pp-Eax"/>
+                            <constraint firstItem="quz-Ji-Bt2" firstAttribute="top" secondItem="ouE-lD-QAR" secondAttribute="top" id="aiB-rv-RI5"/>
+                            <constraint firstItem="quz-Ji-Bt2" firstAttribute="bottom" secondItem="ouE-lD-QAR" secondAttribute="bottom" id="gj0-Sf-dB0"/>
+                            <constraint firstItem="quz-Ji-Bt2" firstAttribute="trailing" secondItem="ouE-lD-QAR" secondAttribute="trailing" id="rsB-pC-fMk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ouE-lD-QAR"/>
+                    </view>
+                    <connections>
+                        <outlet property="contentView" destination="quz-Ji-Bt2" id="RAz-al-irg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ke1-jk-ayP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-12110" y="768"/>
+        </scene>
+        <!--Data View Controller-->
+        <scene sceneID="C6V-eg-RbP">
+            <objects>
+                <viewController storyboardIdentifier="DataViewController" id="6X0-rX-SNi" customClass="DataViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aq8-PE-Re1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgL-Eg-Khw">
+                                <rect key="frame" x="166.5" y="323" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="YgL-Eg-Khw" firstAttribute="centerX" secondItem="Aq8-PE-Re1" secondAttribute="centerX" id="c5q-Yp-hWH"/>
+                            <constraint firstItem="YgL-Eg-Khw" firstAttribute="centerY" secondItem="Aq8-PE-Re1" secondAttribute="centerY" id="niN-59-5ut"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oxD-W2-caR"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabel" destination="YgL-Eg-Khw" id="FN7-Le-hSd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZoS-Aq-pQS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-11310" y="522"/>
+        </scene>
+        <!--Custom Page View Controller-->
+        <scene sceneID="yDL-8s-puY">
+            <objects>
+                <pageViewController storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="CWz-TI-jFS" customClass="CustomPageViewController" customModule="FunboxStore" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="46x-x4-PXE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10508" y="768"/>
+        </scene>
+    </scenes>
+</document>

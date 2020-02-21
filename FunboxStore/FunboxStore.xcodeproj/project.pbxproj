@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7CC653C423D8271200527B8C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC653C323D8271200527B8C /* PageViewController.swift */; };
-		7CC653C623D8275D00527B8C /* SlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC653C523D8275D00527B8C /* SlideViewController.swift */; };
+		7C1271F523FFDD8D00F34B2D /* FrontStoreStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C1271F423FFDD8D00F34B2D /* FrontStoreStoryboard.storyboard */; };
+		7C1271F723FFDE1200F34B2D /* FrontStoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1271F623FFDE1200F34B2D /* FrontStoreViewController.swift */; };
+		7C1271F923FFE5CD00F34B2D /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1271F823FFE5CD00F34B2D /* DataViewController.swift */; };
+		7C1271FB23FFE6BA00F34B2D /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C1271FA23FFE6B900F34B2D /* CustomPageViewController.swift */; };
 		7CC653C823D827C500527B8C /* SlideHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC653C723D827C500527B8C /* SlideHelper.swift */; };
 		7CF40F7223D5B0F500BF33A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF40F7123D5B0F500BF33A5 /* AppDelegate.swift */; };
 		7CF40F7423D5B0F500BF33A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF40F7323D5B0F500BF33A5 /* SceneDelegate.swift */; };
@@ -27,8 +29,10 @@
 		009CC011985738D043725384 /* Pods_FunboxStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FunboxStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6252796A51896E204A2EEE54 /* Pods-FunboxStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunboxStore.debug.xcconfig"; path = "Target Support Files/Pods-FunboxStore/Pods-FunboxStore.debug.xcconfig"; sourceTree = "<group>"; };
 		64E666E487FCA539CCB4C554 /* Pods-FunboxStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FunboxStore.release.xcconfig"; path = "Target Support Files/Pods-FunboxStore/Pods-FunboxStore.release.xcconfig"; sourceTree = "<group>"; };
-		7CC653C323D8271200527B8C /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		7CC653C523D8275D00527B8C /* SlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideViewController.swift; sourceTree = "<group>"; };
+		7C1271F423FFDD8D00F34B2D /* FrontStoreStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FrontStoreStoryboard.storyboard; sourceTree = "<group>"; };
+		7C1271F623FFDE1200F34B2D /* FrontStoreViewController.swift */ = {isa = PBXFileReference; indentWidth = 3; lastKnownFileType = sourcecode.swift; path = FrontStoreViewController.swift; sourceTree = "<group>"; };
+		7C1271F823FFE5CD00F34B2D /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		7C1271FA23FFE6B900F34B2D /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		7CC653C723D827C500527B8C /* SlideHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideHelper.swift; sourceTree = "<group>"; };
 		7CF40F6E23D5B0F500BF33A5 /* FunboxStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FunboxStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CF40F7123D5B0F500BF33A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -73,13 +77,128 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		7C7F886C23D6F89F0050DE8D /* PageVC */ = {
+		7C1271E423FFD75800F34B2D /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				7CC653C323D8271200527B8C /* PageViewController.swift */,
-				7CC653C523D8275D00527B8C /* SlideViewController.swift */,
+				7CF40F7F23D5B0F800BF33A5 /* Info.plist */,
+				7CF40F7A23D5B0F800BF33A5 /* Assets.xcassets */,
 			);
-			name = PageVC;
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		7C1271E523FFD7FC00F34B2D /* App */ = {
+			isa = PBXGroup;
+			children = (
+				7C1271E923FFD81100F34B2D /* Manager */,
+				7C1271E823FFD80D00F34B2D /* Model */,
+				7C1271E723FFD80900F34B2D /* View */,
+				7C1271E623FFD80100F34B2D /* Controller */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
+		7C1271E623FFD80100F34B2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CF40F7123D5B0F500BF33A5 /* AppDelegate.swift */,
+				7CF40F7323D5B0F500BF33A5 /* SceneDelegate.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7C1271E723FFD80900F34B2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CF40F7C23D5B0F800BF33A5 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7C1271E823FFD80D00F34B2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C1271E923FFD81100F34B2D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7CF40F8723D5B60000BF33A5 /* StorageManager.swift */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		7C1271EA23FFD85F00F34B2D /* Front-store */ = {
+			isa = PBXGroup;
+			children = (
+				7C1271ED23FFD87200F34B2D /* Model */,
+				7C1271EC23FFD86E00F34B2D /* View */,
+				7C1271EE23FFD87600F34B2D /* Controller */,
+				7CC653C923D827F600527B8C /* Helper */,
+			);
+			name = "Front-store";
+			sourceTree = "<group>";
+		};
+		7C1271EB23FFD86700F34B2D /* Back-end */ = {
+			isa = PBXGroup;
+			children = (
+				7C1271F123FFD8A000F34B2D /* Model */,
+				7C1271EF23FFD8A000F34B2D /* View */,
+				7C1271F023FFD8A000F34B2D /* Controller */,
+			);
+			name = "Back-end";
+			sourceTree = "<group>";
+		};
+		7C1271EC23FFD86E00F34B2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7C1271F423FFDD8D00F34B2D /* FrontStoreStoryboard.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7C1271ED23FFD87200F34B2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7C1271EE23FFD87600F34B2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7C1271F623FFDE1200F34B2D /* FrontStoreViewController.swift */,
+				7C1271F823FFE5CD00F34B2D /* DataViewController.swift */,
+				7C1271FA23FFE6B900F34B2D /* CustomPageViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7C1271EF23FFD8A000F34B2D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7CF40F7723D5B0F500BF33A5 /* Main.storyboard */,
+				7CF40F8B23D5C97F00BF33A5 /* CustomTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7C1271F023FFD8A000F34B2D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7CF40F8923D5C2BC00BF33A5 /* BackEndTableViewController.swift */,
+				7CF40F8D23D5CE7400BF33A5 /* DetailTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		7C1271F123FFD8A000F34B2D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7CF40F8523D5B49E00BF33A5 /* DeviceModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7CC653C923D827F600527B8C /* Helper */ = {
@@ -111,19 +230,10 @@
 		7CF40F7023D5B0F500BF33A5 /* FunboxStore */ = {
 			isa = PBXGroup;
 			children = (
-				7CF40F7123D5B0F500BF33A5 /* AppDelegate.swift */,
-				7CF40F7323D5B0F500BF33A5 /* SceneDelegate.swift */,
-				7CF40F7723D5B0F500BF33A5 /* Main.storyboard */,
-				7CF40F7A23D5B0F800BF33A5 /* Assets.xcassets */,
-				7CF40F7C23D5B0F800BF33A5 /* LaunchScreen.storyboard */,
-				7CF40F7F23D5B0F800BF33A5 /* Info.plist */,
-				7CF40F8523D5B49E00BF33A5 /* DeviceModel.swift */,
-				7CF40F8723D5B60000BF33A5 /* StorageManager.swift */,
-				7CF40F8923D5C2BC00BF33A5 /* BackEndTableViewController.swift */,
-				7CF40F8B23D5C97F00BF33A5 /* CustomTableViewCell.swift */,
-				7CF40F8D23D5CE7400BF33A5 /* DetailTableViewController.swift */,
-				7CC653C923D827F600527B8C /* Helper */,
-				7C7F886C23D6F89F0050DE8D /* PageVC */,
+				7C1271E523FFD7FC00F34B2D /* App */,
+				7C1271EA23FFD85F00F34B2D /* Front-store */,
+				7C1271EB23FFD86700F34B2D /* Back-end */,
+				7C1271E423FFD75800F34B2D /* Supporting */,
 			);
 			path = FunboxStore;
 			sourceTree = "<group>";
@@ -189,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CF40F7E23D5B0F800BF33A5 /* LaunchScreen.storyboard in Resources */,
+				7C1271F523FFDD8D00F34B2D /* FrontStoreStoryboard.storyboard in Resources */,
 				7CF40F7B23D5B0F800BF33A5 /* Assets.xcassets in Resources */,
 				7CF40F7923D5B0F500BF33A5 /* Main.storyboard in Resources */,
 			);
@@ -245,12 +356,13 @@
 			files = (
 				7CC653C823D827C500527B8C /* SlideHelper.swift in Sources */,
 				7CF40F7223D5B0F500BF33A5 /* AppDelegate.swift in Sources */,
+				7C1271F923FFE5CD00F34B2D /* DataViewController.swift in Sources */,
+				7C1271FB23FFE6BA00F34B2D /* CustomPageViewController.swift in Sources */,
+				7C1271F723FFDE1200F34B2D /* FrontStoreViewController.swift in Sources */,
 				7CF40F8823D5B60000BF33A5 /* StorageManager.swift in Sources */,
 				7CF40F8C23D5C97F00BF33A5 /* CustomTableViewCell.swift in Sources */,
 				7CF40F8E23D5CE7400BF33A5 /* DetailTableViewController.swift in Sources */,
 				7CF40F7423D5B0F500BF33A5 /* SceneDelegate.swift in Sources */,
-				7CC653C623D8275D00527B8C /* SlideViewController.swift in Sources */,
-				7CC653C423D8271200527B8C /* PageViewController.swift in Sources */,
 				7CF40F8A23D5C2BC00BF33A5 /* BackEndTableViewController.swift in Sources */,
 				7CF40F8623D5B49E00BF33A5 /* DeviceModel.swift in Sources */,
 			);
