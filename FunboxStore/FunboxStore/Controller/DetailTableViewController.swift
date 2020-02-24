@@ -71,16 +71,9 @@ class DetailTableViewController: UITableViewController {
         }
     }
     
-    private func setupNavigationBar(){
-        if let topItem = navigationController?.navigationBar.topItem {
-            topItem.backBarButtonItem = UIBarButtonItem(title: "Назад", style: .plain, target: nil, action: nil)
-        }
-        navigationItem.leftBarButtonItem = nil
-    }
-    
     // MARK: - Actions
     
-    @IBAction func canselButtonPress(_ sender: Any) {
+    @IBAction func canсelButtonPress(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
