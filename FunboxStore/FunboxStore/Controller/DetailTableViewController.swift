@@ -64,7 +64,6 @@ class DetailTableViewController: UITableViewController {
     private func setupEditScreen() {
         saveButton.isEnabled = false
         if currentDevice != nil {
-            setupNavigationBar()
             titleTF.text = currentDevice.title
             priceTF.text = "\(currentDevice.price)"
             numberTF.text = "\(currentDevice.number)"
