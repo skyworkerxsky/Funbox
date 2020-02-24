@@ -60,20 +60,6 @@ import RealmSwift
         self.present(nav, animated:true, completion:nil)
     }
     
-    // MARK: Navigation
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "showDetail" {
-            
-            guard let indexPath = tableView.indexPathForSelectedRow else { return }
-            let newDevice = device[indexPath.row]
-            let newDeviceVC = segue.destination as! DetailTableViewController
-            newDeviceVC.currentDevice = newDevice
-            
-        }
-    }
-    
     // MARK: - Actions
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
